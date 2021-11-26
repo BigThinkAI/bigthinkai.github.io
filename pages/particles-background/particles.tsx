@@ -78,7 +78,7 @@ const ParticlesApp = ({children} : {children: any}) => {
                                 enable: true,
                                 value_area: 1000,
                             },
-                            value: 80,
+                            value: 150,
                         },
                         opacity: {
                             value: 0.5,
