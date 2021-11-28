@@ -1,7 +1,7 @@
 import Particles from 'react-tsparticles';
-import styles from "./Particle.module.css";
+import "./Particles.module.css";
 
-const ParticlesApp = ({children} : {children: any}) => {
+const ParticlesBG = () => {
     const particlesInit = (main: any) => {
         console.log(main)
     }
@@ -11,11 +11,15 @@ const ParticlesApp = ({children} : {children: any}) => {
     }
 
     return (
-        <div className="App">
+        <div className="background">
             <Particles
-                id={styles.tsparticles}
+                id="tsparticles"
                 init={particlesInit}
                 loaded={particlesLoaded}
+                style={{
+                    zIndex: -1,
+                    backgroundColor: 'green'
+                }}
                 options={{
                     background: {
                         color: {
@@ -78,7 +82,7 @@ const ParticlesApp = ({children} : {children: any}) => {
                                 enable: true,
                                 value_area: 1000,
                             },
-                            value: 150,
+                            value: 120,
                         },
                         opacity: {
                             value: 0.5,
@@ -94,9 +98,8 @@ const ParticlesApp = ({children} : {children: any}) => {
                     detectRetina: true,
                 }}
             />
-            {children}
         </div>
     );
 }
 
-export default ParticlesApp;
+export default ParticlesBG;
