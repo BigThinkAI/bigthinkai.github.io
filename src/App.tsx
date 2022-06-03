@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import ParticlesBG from "./components/particles/particles-bg";
+import {LinearProgress} from "@mui/material";
 
 function App() {
 	return (
 		<div className="App">
-			<ParticlesBG />
-				<code className="App-header">
-					Stay tuned for the BigThinkAI website!
-				</code>
+			<div className="text">Website down for maintenance</div>
+			<div><LinearProgress className="progress-bar" /></div>
 		</div>
 	);
 }
